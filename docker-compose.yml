@@ -1,0 +1,16 @@
+# docker-compose version
+version: '3.8'
+
+# docker-compose services
+services:
+  # service name
+  web:
+    # path to dockerfile
+    build: .
+
+    # image name
+    image: personal-website:1.0
+
+    # the port of the container and the port we defined in the dockerfile
+    ports:
+      - '3000:3000'
